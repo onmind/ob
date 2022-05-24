@@ -1,0 +1,929 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>3.3 Class of Node - CAU Game&Ani 2022_1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#33-class-of-node" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CAU Game&amp;Ani 2022_1" class="md-header__button md-logo" aria-label="CAU Game&Ani 2022_1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CAU Game&Ani 2022_1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3.3 Class of Node
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CAU Game&amp;Ani 2022_1" class="md-nav__button md-logo" aria-label="CAU Game&Ani 2022_1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CAU Game&Ani 2022_1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../How%20to%20set%20up/" class="md-nav__link">
+        How to set up
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          1. Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Interface" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          1. Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Interface/1.1%20About%20Blender/" class="md-nav__link">
+        1.1 About Blender
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Interface/1.2%20Start%20up/" class="md-nav__link">
+        1.2 Start up
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Interface/1.3%20%20Basic%20interface/" class="md-nav__link">
+        1.3 Basic Interface
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          2. Rendering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Rendering" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          2. Rendering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Rendering/2.1%20Rendering/" class="md-nav__link">
+        2.1 Rendering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Rendering/2.2%20Cycle/" class="md-nav__link">
+        2.2  Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Rendering/2.3%20Eevee/" class="md-nav__link">
+        2.3 Eevee
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          3.Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.Node" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          3.Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.1%20About%20Node/" class="md-nav__link">
+        3.1  About Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.2%20Node%20tree%20%26%20Socket/" class="md-nav__link">
+        3.2 Node tree & Socket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3.3 Class of Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        3.3 Class of Node
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#33-class-of-node" class="md-nav__link">
+    3.3 Class of Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shader-node" class="md-nav__link">
+    Shader Node
+  </a>
+  
+    <nav class="md-nav" aria-label="Shader Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-wrangler" class="md-nav__link">
+    node wrangler
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-node" class="md-nav__link">
+    Material Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture-node" class="md-nav__link">
+    Texture Node
+  </a>
+  
+    <nav class="md-nav" aria-label="Texture Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shader-vs-material-vs-texture" class="md-nav__link">
+    Shader vs Material vs Texture  의 차이는?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composite-node" class="md-nav__link">
+    Composite Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometry-node" class="md-nav__link">
+    Geometry Node
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometry Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-in-interface" class="md-nav__link">
+    Node in interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          4.Lighting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.Lighting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          4.Lighting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.Lighting/About%20Lighting/" class="md-nav__link">
+        About Lighting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#33-class-of-node" class="md-nav__link">
+    3.3 Class of Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shader-node" class="md-nav__link">
+    Shader Node
+  </a>
+  
+    <nav class="md-nav" aria-label="Shader Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-wrangler" class="md-nav__link">
+    node wrangler
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-node" class="md-nav__link">
+    Material Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture-node" class="md-nav__link">
+    Texture Node
+  </a>
+  
+    <nav class="md-nav" aria-label="Texture Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shader-vs-material-vs-texture" class="md-nav__link">
+    Shader vs Material vs Texture  의 차이는?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composite-node" class="md-nav__link">
+    Composite Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometry-node" class="md-nav__link">
+    Geometry Node
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometry Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-in-interface" class="md-nav__link">
+    Node in interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>3.3 Class of Node</h1>
+
+<h2 id="33-class-of-node">3.3 Class of Node<a class="headerlink" href="#33-class-of-node" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>노드는  지정된 연결을 따라서 데이터를 서로에게 공급하는 일종의 조합으로, 크게 3가지 종류의 노드로 나누어지게 됩니다. 많은 노드들이 있지만, 일단 대표적인 노드들부터 알아봅시다. </p>
+<ul>
+<li>텍스쳐 노드 Texture Node </li>
+<li>쉐이더 노드 Shader Node </li>
+<li>머티리얼 노드 Material Node</li>
+<li>컴포지팅 노드 Compositing Node </li>
+</ul>
+</li>
+<li>
+<p>3.0 부터는 노드의 데이터들을 조합하여, 절차적인 에셋들을 만들 수 있는 지오메트리 노드가 추가되었습니다. </p>
+<ul>
+<li>지오메트리 노드 Geometry node </li>
+</ul>
+</li>
+<li>애드온을 통해서 노드의 기능을 확장하기도 합니다. 가장 잘 알려진 것은 애드온으로 제공되는 애니메이션 노드입니다. <ul>
+<li>애니메이션 노드 Animation Node </li>
+</ul>
+</li>
+</ul>
+<h2 id="shader-node">Shader Node<a class="headerlink" href="#shader-node" title="Permanent link">&para;</a></h2>
+<ul>
+<li>화면상에 보이는 재질 Materials, 빛 lights 그리고 배경 Background 등은 모두 쉐이더 노드 Shader node를 통해 만들어질 수 있습니다.<blockquote>
+<p>쉐이더 Shader 란? 
+쉐이더의 기본적인 정의는 3D그래픽 상에서 화면에 출력할 픽셀의 위치와 색상을 계산하는 함수입니다. 
+쉐이더는 대부분 음영으로 번역되며, 3d 장면에서 오브젝트,서페이스, 폴리곤의 색상을 변경하는 과정을 말합니다. 우리가 배울 쉐이딩의 개념은 컴퓨터 그래픽의 3d모델에서 빛과 어둠의 수준을 변화시켜, 깊이 인식을 묘사하는 것을 말합니다. 
+블렌더 상에서 우리가 사용할 쉐이더의 정의는, 3D 그래픽 상에서 사물의 재질을 나타내주는 광원 Lighting과 그림자 Shade, 그리고 이를 통해 음영처리에 사용되는 값입니다. Shade와 Shadow의 차이는 광원과 음영 파트에서 다시 다루도록 하겠습니다. </p>
+</blockquote>
+</li>
+<li>쉐이더 노드는 Value, Vector, Color 그리고 Shader 값을 포함하고 있습니다. </li>
+<li>쉐이더 노드에서는 주로 쓰이는 몇가지 유형의 노드들이 있습니다. <ul>
+<li>BSDF shader : 물체 표면에 보이는 빛의 반사, 굴절, 혹은 흡수등을 표현합니다.</li>
+<li>Emission Shader : 물체 표면에 보이는 발광 등을 표현합니다. </li>
+<li>Volume Shader : 볼륨 내부의 빛의 산란 등을 표현합니다. </li>
+<li>Background Shader : 환경에서 방출되는 빛을 표현합니다. </li>
+<li>이외에도 Mix, Add, Shade node를 사용하여 데이터를 혼합하고 추가하게 됩니다. </li>
+</ul>
+</li>
+</ul>
+<h4 id="node-wrangler">node wrangler<a class="headerlink" href="#node-wrangler" title="Permanent link">&para;</a></h4>
+<pre><code>- 쉐이더 노드에는 Node Wrangler라는 자주 쓰이는 애드온이 있습니다. Shader editor나 Compositor에서 단축키로 노드를 쉽게 배치해주는 애드온으로, 블렌더 내에 기본적으로 탑재되어 있습니다. 
+    1. Preference- addons-node wrangler를 클릭하여 활성화하세요. 
+    2. node editor에서 Principled BSDF를 선택 후, 텍스쳐 파일을 선택 후 Ctrl + Shfit + T를 누르세요. 
+    3. Texture coordinate- mapping이 자동으로 연결되게 됩니다. 텍스쳐 노드를 선택후 Ctrl + T를 누르세요. 
+    4. Mapping node의 위치, 회전, 크기 등을 조절해가면서 텍스쳐를 변형시킵니다.
+</code></pre>
+<h2 id="material-node">Material Node<a class="headerlink" href="#material-node" title="Permanent link">&para;</a></h2>
+<p><img src="https://docs.blender.org/manual/en/latest/_images/render_shader-nodes_output_material_node.png" width="200" hight="300"> </p>
+<ul>
+<li>머티리얼 노드는 표면의 재질 정보를 오브젝트의 표면에 출력하는 데 사용됩니다. </li>
+<li>셰이더 Shader 를 주로 다루게 되는데, 셰이더 Shader는 3d 개체에 빛이 반사되거나 보여지는 재질을 말합니다. 금속, 플라스틱, 물, 나무, 유기물, 혹은 반짝이거나 투명한 것 등을 만들 때 쉐이더를 다뤄야합니다. 셰이더에 대해서는 나중에 다시 한번 다루겠습니다. </li>
+<li>물체 표면을 다루는 Surface, 오브젝트 개체의 볼륨 음영처리인 Volume, 쉐이더를 이용하여 표면 모양에 세부 정보를 추가할 수 있는  Displacement가 있습니다. </li>
+</ul>
+<h2 id="texture-node">Texture Node<a class="headerlink" href="#texture-node" title="Permanent link">&para;</a></h2>
+<ul>
+<li>텍스쳐 노드는 3D 텍스쳐(재질)을 사용할 수 있도록 해주는 노드입니다. </li>
+<li>
+<p>이 텍스쳐 생성 시스템은 텍스쳐 좌표와 매개변수등을 입력으로 사용하고, 색상이나 값을 출력해주는 다양한 절차적(Procedul) 텍스쳐를 만들어낼 수 있습니다. 
+     <img src="https://docs.blender.org/manual/en/latest/_images/compositing_node-types_CompositorNodeTexture.png" width="200" hight="300"> </p>
+<blockquote>
+<p>절차적 텍스쳐 Profedural Texture 이란?
+절차적 텍스쳐링은 수학적 공식(함수)등을 사용하여 텍스쳐를 생성하는 방법입니다. 블렌더에서 텍스쳐링은 일반적으로 크게 2가지로 나뉘는데, 하나는 Profedural Texture 절차적 텍스쳐링, 하나는  Image texture 이미지 텍스쳐링입니다. 절차적 텍스쳐링은 수학적 공식(함수)등을 사용하여 텍스쳐를 생성하는 방법이며, 이미지 텍스처링은 외부의 이미지(jpg,png등)같이 외부 그래픽 툴에서 처리한 이미지를 블렌더로 불러와서 사용합니다. </p>
+</blockquote>
+</li>
+<li>
+<p>노드를 기반으로 결합된 텍스쳐들은 텍스쳐 브러쉬나 컴포지팅, 혹은 파티클에서 이용할 수 있습니다. 텍스쳐 노드는 텍스쳐의 원점을 변환하는 Offset, 텍스쳐의 크기를 조정하는 Scale 등을 포함합니다. </p>
+<p><img src="https://docs.blender.org/manual/en/latest/_images/editors_texture-node_introduction_types-combined.png" width="400" hight="300"> </p>
+</li>
+<li>
+<p>텍스쳐 노드는 3.0 이후의 버전에서 새로운 시스템으로 대체될 예정이라, 여기에서는 이전 버전까지 어떤 종류가 있었는지 간단한 목록만을 기술합니다. </p>
+<ul>
+<li>Blender node </li>
+<li>Cloud node </li>
+<li>Distorted noise node </li>
+<li>Magic node </li>
+<li>Marble node </li>
+<li>Musgrave node </li>
+<li>Noise node </li>
+<li>Stucci node </li>
+<li>Vornoi node </li>
+<li>Wood Node </li>
+</ul>
+<h4 id="shader-vs-material-vs-texture">Shader vs Material vs Texture  의 차이는?<a class="headerlink" href="#shader-vs-material-vs-texture" title="Permanent link">&para;</a></h4>
+<pre><code>자칫 보면 Shader와 Material의 의미가 유사하게 보일 수 있습니다. 대부분의 많은 경우, Shader와 Material은 같은 의미로 사용됩니다. Material은 전통적으로 블렌더에서 오브젝트에 적용하는 shader 모음을 가리키는 용어로 쓰였습니다.
+
+- Shader :  mesh에 광원과 그림자, 즉 음영을 처리하는 값입니다. 
+- Material : Mesh에 음영 처리 방법을 정의해주는 shader 모음입니다. 
+- Texture : Texture는 shader 상태에서 디테일을 추가해줍니다.
+</code></pre>
+</li>
+</ul>
+<h2 id="composite-node">Composite Node<a class="headerlink" href="#composite-node" title="Permanent link">&para;</a></h2>
+<p><img src="https://docs.blender.org/manual/en/latest/_images/compositing_node-types_CompositorNodeComposite.png" width="200" hight="300"> </p>
+<ul>
+<li>컴포지트 노드 Composite nodesms 는 데이터를 출력할 수 있는 렌더러에 연결해줍니다. </li>
+<li>블렌더의 메뉴에는 컴포지팅, 즉 여러 시각 요소들을 합성하여 렌더링 직전, 하나의 최종 이미지로 결합하는 섹션이 있습니다. 이 섹션에서 composite node를 이용하여 이미지와 각 요소의 데이터를 검사하고 플러그인하여 최종 결과물을 다듬을 수 있습니다. </li>
+<li>뷰어 노드라는 비슷한 기능을 담당하는 노드가 존재하지만 뷰어노드는 렌더링 전에 미리 노드 트리로 이어진 결과를 볼 수 있으며, 주로 특정 노드 그룹의 특정 결과를 보게 됩니다. 컴포지트 노드는 최종렌더링 작업을 수행합니다. </li>
+<li>Image, Alpha, Z depth 등의 데이터를 포함합니다. </li>
+</ul>
+<h2 id="geometry-node">Geometry Node<a class="headerlink" href="#geometry-node" title="Permanent link">&para;</a></h2>
+<p><img src="https://docs.blender.org/manual/en/latest/_images/render_shader-nodes_input_geometry_node.png" width="200" hight="300"> </p>
+<ul>
+<li>지오메트리노드는 2.9부터 새로 추가된 노드 시스템입니다. </li>
+<li>일반 모디파이 패널에서 보는 것보다 훨씬 간단한 방식으로 오브젝트의 지오메트리를 변경하는데 사용할 수  있습니다. </li>
+<li>연결된 노드들의 종류에 따라 같은 컬러를 써서 한 눈에 알아볼 수있도록 세팅되어 있습니다. </li>
+<li>노드 위에 커서를 올리면, 각  노드가 어떤 기능을 가지고 있는지 볼 수 있습니다. </li>
+<li>절차적 에셋을 만들 수 있습니다.  </li>
+<li>지오메트리 노드가 존재하기 전까지는 일반적으로 파티클 시스템을 통해 작업해야했지만, 이제는 더 많은 제어기능을 통해서 절차적으로 에셋을 만들어나갈 수 있습니다. </li>
+</ul>
+<p>![[geometry node.gif]]
+- 음영에 대한 데이터를 제공합니다. 
+- 지오메트리 노드는 일반적으로 사용하는 Array, Fire, Solidify를 조금 더 세밀하게 조정할 수 있
+- 지오메트리 노드는 셰이도 노드와 비슷한 개념을 가지고 있습니다. </p>
+<h3 id="node-in-interface">Node in interface<a class="headerlink" href="#node-in-interface" title="Permanent link">&para;</a></h3>
+<p><image src="https://cdn.shortpixel.ai/spai/w_3200+q_lossy+ret_img+to_webp/https://artisticrender.com/wp-content/uploads/2019/12/blender_shader_workspace-scaled.jpg" with="400" hight="200"></p>
+<p><image src="https://cdn.shortpixel.ai/spai/w_1926+q_lossy+ret_img+to_webp/https://artisticrender.com/wp-content/uploads/2019/12/blender_node_editor_and_properties_panel.png" with="400" hight="200"></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../3.2%20Node%20tree%20%26%20Socket/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3.2 Node tree &amp; Socket" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              3.2 Node tree & Socket
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../4.Lighting/About%20Lighting/" class="md-footer__link md-footer__link--next" aria-label="Next: About Lighting" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About Lighting
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+    
+  </body>
+</html>
