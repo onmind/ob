@@ -1,0 +1,795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1.3%20%20Basic%20interface/">
+      
+      
+        <link rel="next" href="../1.5%20Sculpting%20Workflow/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>1.4 Basic Workflow - Digital Sculpting</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#14-basic-workflow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Digital Sculpting" class="md-header__button md-logo" aria-label="Digital Sculpting" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Sculpting
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.4 Basic Workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Digital Sculpting" class="md-nav__button md-logo" aria-label="Digital Sculpting" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Digital Sculpting
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.0%20How%20to%20set%20up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.0 How to set up
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1%20About%20Blender/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 About Blender
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2%20Start%20up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Start up
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.3%20%20Basic%20interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Basic Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.4 Basic Workflow
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Basic Workflow
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-modeling-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 모델링 워크플로 (Modeling Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sculpting-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.스컬프팅 워크플로 (Sculpting Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-texturing-shading-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 텍스처링 및 셰이딩 워크플로 (Texturing &amp; Shading Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-animation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 애니메이션 워크플로 (Animation Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-simulation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 시뮬레이션 워크플로 (Simulation Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1단계: 기본 모델링
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2단계: 텍스처링
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3단계: 라이팅과 렌더링
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.5%20Sculpting%20Workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Sculpting Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.6%20Tips%21/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Tips!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-modeling-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 모델링 워크플로 (Modeling Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sculpting-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.스컬프팅 워크플로 (Sculpting Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-texturing-shading-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 텍스처링 및 셰이딩 워크플로 (Texturing &amp; Shading Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-animation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 애니메이션 워크플로 (Animation Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-simulation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 시뮬레이션 워크플로 (Simulation Workflow)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1단계: 기본 모델링
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2단계: 텍스처링
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3단계: 라이팅과 렌더링
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>블렌더를 처음 접하는 분이시라면, 3D 모델링 프로젝트를 처음부터 끝까지 완성하는 과정은 단계별로 체계적으로 접근하는 것이 중요합니다. Blender를 사용하는 과정은 다양한 워크플로(workflows)가 존재하며, 각각은 특정 목적이나 프로젝트 유형에 맞춰 설계되어 있습니다. </p>
+<iframe width="720" height="480" src="https://www.youtube.com/embed/cTx-n4OZXYE" title="Charge - Previz Workflow Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h1 id="14-basic-workflow">1.4 Basic Workflow<a class="headerlink" href="#14-basic-workflow" title="Permanent link">&para;</a></h1>
+<h3 id="1-modeling-workflow">1. 모델링 워크플로 (Modeling Workflow)<a class="headerlink" href="#1-modeling-workflow" title="Permanent link">&para;</a></h3>
+<p>이 워크플로는 3D 모델을 생성하고 세부적으로 조정하는 과정을 포함합니다. 모델링 워크플로는 주로 아키텍처 시각화, 게임 자산 개발, 프로토타입 디자인 등에서 사용됩니다.</p>
+<ul>
+<li><strong>기본 모델링</strong>: 기본 도형으로 시작하여 모델의 큰 형태를 만듭니다.</li>
+<li><strong>세부 조정</strong>: 에디트 모드를 사용해 모델의 세부 사항을 조정합니다.</li>
+<li><strong>모디파이어 사용</strong>: 모델에 복잡한 형태나 효과를 쉽게 추가하기 위해 모디파이어를 사용합니다.</li>
+</ul>
+<h3 id="2-sculpting-workflow">2.스컬프팅 워크플로 (Sculpting Workflow)<a class="headerlink" href="#2-sculpting-workflow" title="Permanent link">&para;</a></h3>
+<p>조각 워크플로는 주로 복잡한 형태와 디테일이 필요한 캐릭터나 생물학적 객체를 모델링할 때 사용됩니다. 조각 도구를 사용하여 모델에 직접적으로 디테일을 추가하고 형태를 조정합니다.</p>
+<ul>
+<li><strong>다이나믹 탑올로지</strong>: 모델에 디테일을 추가할 때 메시의 구조가 실시간으로 조정됩니다.</li>
+<li><strong>브러시</strong>: 다양한 조각 브러시를 사용하여 모델에 디테일을 추가하고 형태를 조각합니다.</li>
+</ul>
+<h3 id="3-texturing-shading-workflow">3. 텍스처링 및 셰이딩 워크플로 (Texturing &amp; Shading Workflow)<a class="headerlink" href="#3-texturing-shading-workflow" title="Permanent link">&para;</a></h3>
+<p>이 워크플로는 모델에 색상, 재질, 패턴을 추가하여 시각적으로 리얼리스틱하게 만드는 과정을 포함합니다. 이는 시각 효과(VFX), 애니메이션, 게임 개발 등에서 중요합니다.</p>
+<ul>
+<li><strong>UV 언랩핑</strong>: 모델의 3D 표면을 2D 이미지로 펼쳐서 텍스처를 정확하게 매핑합니다.</li>
+<li><strong>재질 설정</strong>: 물리 기반의 렌더링(PBR) 재질을 사용하여 모델에 현실적인 재질을 설정합니다.</li>
+<li><strong>노드 기반 셰이더</strong>: 복잡한 재질과 텍스처를 생성하기 위해 노드 기반의 셰이더 시스템을 사용합니다.</li>
+</ul>
+<h3 id="4-animation-workflow">4. 애니메이션 워크플로 (Animation Workflow)<a class="headerlink" href="#4-animation-workflow" title="Permanent link">&para;</a></h3>
+<p>애니메이션 워크플로는 객체나 캐릭터에 움직임을 부여하는 과정을 포함합니다. 이 워크플로는 애니메이션 제작, 게임 디자인, 시뮬레이션에서 사용됩니다.</p>
+<ul>
+<li><strong>리깅</strong>: 모델에 골격 시스템을 추가하여 움직일 수 있게 합니다.</li>
+<li><strong>키프레임 애니메이션</strong>: 특정 시점에 객체의 위치, 회전, 크기 등을 지정하여 애니메이션을 생성합니다.</li>
+<li><strong>모션 캡처</strong>: 실제 움직임을 기반으로 캐릭터 애니메이션을 생성합니다.</li>
+</ul>
+<h3 id="5-simulation-workflow">5. 시뮬레이션 워크플로 (Simulation Workflow)<a class="headerlink" href="#5-simulation-workflow" title="Permanent link">&para;</a></h3>
+<p>시뮬레이션 워크플로는 물리 기반의 현실적인 효과(예: 천, 불, 물, 연기)를 생성하는 과정을 포함합니다. 이 워크플로는 시각 효과(VFX) 제작, 자연 현상 시뮬레이션 등에 사용됩니다.</p>
+<ul>
+<li><strong>플루이드 시뮬레이션</strong>: 물, 불, 연기 등의 효과를 생성합니다.</li>
+<li><strong>소프트 바디 및 리지드 바디 시뮬레이션</strong>: 충돌 및 물리적 상호작용을 시뮬레이션합니다.</li>
+</ul>
+<p>아래는 가장 기초적인 블렌더의 모델링 - 텍스처링 - 라이팅과 렌더링 과정입니다. </p>
+<blockquote>
+<p>[!기본적인 모델링 작업과정은 아래를 참고해보세요! ] </p>
+</blockquote>
+<h3 id="1">1단계: 기본 모델링<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>기본 도형 추가하기</strong>: 'Shift + A'를 눌러 메시 메뉴에서 기본 도형(예: 큐브, 구)을 선택하고 추가합니다. 이 도형들은 여러분의 모델링 작업의 출발점이 됩니다.</p>
+</li>
+<li>
+<p><strong>에디트 모드</strong>: 'Tab' 키를 눌러 에디트 모드로 전환하면, 도형의 버텍스, 에지, 페이스를 선택하고 수정할 수 있습니다. 이를 통해 기본 도형의 형태를 변경하여 원하는 모양을 만듭니다.</p>
+</li>
+<li>
+<p><strong>변형 도구 사용하기</strong>: 'G' (이동), 'R' (회전), 'S' (크기 조정)을 사용해 오브젝트를 조작합니다. 이러한 기본 변형 도구를 통해 모델의 위치, 방향, 크기를 정밀하게 조정할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>모디파이어 적용하기</strong>: 속성 패널에서 모디파이어 탭을 선택하고, 예를 들어 'Subdivision Surface'를 추가하여 모델의 디테일을 높이고 매끄러운 표면을 생성할 수 있습니다.</p>
+</li>
+</ol>
+<h3 id="2">2단계: 텍스처링<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>재질 추가</strong>: 속성 패널의 재질 탭에서 '새로운 재질'을 추가합니다. 여기서는 기본 색상, 광택, 투명도 등을 조정할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>UV 맵핑</strong>: 모델을 언랩하여 2D 이미지 텍스처가 3D 모델에 어떻게 매핑될지 결정합니다. 'U'를 눌러 언랩 메뉴를 열고, 적절한 언랩 방법을 선택합니다.</p>
+</li>
+<li>
+<p><strong>텍스처 페인팅</strong>: 텍스처 페인트 모드를 사용하여 모델에 직접 디테일을 그려 넣습니다. 이를 통해 개별적인 디테일을 추가하고 모델을 더욱 리얼리틱하게 만들 수 있습니다.</p>
+</li>
+</ol>
+<h3 id="3">3단계: 라이팅과 렌더링<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>라이트 추가</strong>: 'Shift + A'를 통해 씬에 광원을 추가합니다. 포인트 라이트, 스폿라이트, 선 라이트 등 다양한 유형의 라이트를 실험하여 씬에 깊이와 분위기를 추가하세요.</p>
+</li>
+<li>
+<p><strong>라이트 조정</strong>: 각 라이트의 속성을 조정하여 광도, 색상, 그림자의 세부 사항을 제어합니다. 이를 통해 원하는 분위기와 효과를 씬에 구현할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>카메라 설정</strong>: 'Shift + A'를 통해 카메라를 추가하고, 씬의 원하는 부분을 포착할 카메라의 위치와 방향을 조정합니다.</p>
+</li>
+<li>
+<p><strong>렌더링</strong>: 최종 씬을 이미지나 비디오로 출력하기 위해 렌더링 설정을 조정하고, 'F12'를 눌러 렌더링을 시작합니다. 렌더링 과정에서는 모델, 텍스처, 라이트, 카메라 설정이 모두 반영됩니다.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
